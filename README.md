@@ -33,7 +33,8 @@ Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikr
 2. Succesful implementation of an AJAX call or fetch (I have called for an external API, AlphaVantage to fetch the latest stock price)
 ``` In this example, APPLE
 const apiKey = 'MH0QLY17SXF8TB6D'; //Own API key from AlphaVantage
-const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=1min&apikey=${apiKey}`; //where we get out API response
+//where we get out API response
+const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=1min&apikey=${apiKey}`; 
     const stockPriceElement = document.getElementById('stock-price');
 
     stockPriceElement.innerHTML = 'Stock Price: Loading...'; //while we wait
