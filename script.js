@@ -64,12 +64,12 @@ const images = ["https://st2.depositphotos.com/3528377/6481/i/450/depositphotos_
               setTimeout(()=>{
               this.reset();
               this.start();
-              }, 2000);
+              }, 2000); //wait 2000ms to reset and start timer again
             } else {
               this.time--;
               this.updateCountdown();
             }
-          }, 1000);
+          }, 1000); //wait 1000ms to update timer
         }
       
         updateCountdown() {
@@ -84,16 +84,17 @@ const images = ["https://st2.depositphotos.com/3528377/6481/i/450/depositphotos_
       }
       
       const countdownElement = document.getElementById('countdown');
-      const initialTime = 60;
+      const initialTime = 60; //Initial time of 60seconds
       const countdownTimer = new CountdownTimer(countdownElement, initialTime);
       countdownTimer.start();
 
 const apiKey = 'MH0QLY17SXF8TB6D'; //Own API key from AlphaVantage
 document.getElementById('apple-stock').addEventListener('click', () => {
+    //Only need to change "AAPL" with stock symbol of choice.
     const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=1min&apikey=${apiKey}`;
     const stockPriceElement = document.getElementById('stock-price');
 
-    stockPriceElement.innerHTML = 'Stock Price: Loading...';
+    stockPriceElement.innerHTML = 'AAPL Stock Price: Loading...';
 
     fetch(aaplApiUrl)
         .then((response) => response.json())
@@ -104,6 +105,7 @@ document.getElementById('apple-stock').addEventListener('click', () => {
 
             stockPriceElement.innerHTML = `Stock Price for AAPL: $${stockPrice}, Last updated: ${lastRefreshed}`;
         })
+        //Throws error if unable to fetch API data
         .catch((error) => {
             stockPriceElement.textContent = 'Error: Unable to fetch stock price';
         });
@@ -113,7 +115,7 @@ document.getElementById('microsoft-stock').addEventListener('click', () => {
     const microsoftApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=${apiKey}`;
     const stockPriceElement = document.getElementById('stock-price');
 
-    stockPriceElement.innerHTML = 'Stock Price: Loading...';
+    stockPriceElement.innerHTML = 'MSFT Stock Price: Loading...';
 
     fetch(microsoftApiUrl)
         .then((response) => response.json())
