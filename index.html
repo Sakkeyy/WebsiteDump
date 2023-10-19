@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <div class="flex-container">
+        <div>SELF</div>
+        <div>ADJUSTING</div>
+        <div>TEXT</div>
+    </div>
+    
+    
+    <header>
+        <h1>Welcome to My Website for IN00DL12-3002</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#gallery">Photos</a></li>
+                <li><a href="#contact">Tell us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About My work</h2>
+            <p>I'm just trying to make ends meet and have this website properly done and graded so we can all enjoy our syysloma.</p>
+        </section>
+
+        
+        <section id="gallery">
+            <h2>Photos</h2>
+            <div id="image-slider">
+                <img id="slider-image" src="https://st2.depositphotos.com/3528377/6481/i/450/depositphotos_64810021-stock-photo-policeman-with-folded-hands.jpg" alt="Image 1">
+                <button onclick="prevImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
+            </div>
+            
+        </section>
+
+        <section id="contact">
+            <h2>Tell us about yourself</h2>
+            <form id="feedbackForm">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br>
+                <input type="button" value="Submit" onclick="updateTable()">
+            </form>
+            
+            <p>The data will be sent to <a href="https://poliisi.fi/keskusrikospoliisi">Suomen keskusrikospoliisi</a> To check if you have a criminal record.</p>
+            <p> Top criminals in Finland</p>
+            <table class="box" id="nameTable">
+                <tr>
+                  <th>First name</th>
+                  <th>Last name</th>
+                </tr>
+                <tr>
+                  <td>Janne Nacci</td>
+                  <td>Tranberg</td>
+                </tr>
+                <tr>
+                  <td>Juhani</td>
+                  <td>Aataminpoika</td>
+                </tr>
+            </table>
+
+            <form>
+                <fieldset>
+                    <legend>Was this useful?</legend>
+                    <label>
+                        <input type="radio" name="response" value="yes">
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="response" value="no">
+                        No
+                    </label>
+                </fieldset>
+                <input type="button" value="Submit" onclick="showMessage()">
+            </form>
+
+        </section>
+    </main>
+
+    <div id="stock-price">Stock Price: Loading...</div>
+
+
+    <footer>
+        <p>&copy; 2023 Thank you sincerely for your time. + <a href="popup.html" target="Popup">additional popup window</a></p>
+    </footer>
+
+    <div id="countdown">Review: 60</div>
+    <script src="script.js"></script>
+</body>
+</html>
