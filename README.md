@@ -1,7 +1,7 @@
 # WebsiteDump
 IN00DL12-3002- Web ohjelmointi verkkosivu 
 
-Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikriteereistä verkkosivuni luomisessa. Joissakin esimerkeissä tulen viittaamaan koodin pätkiin. HTML & CSS 
+Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikriteereistä verkkosivuni luomisessa. Joissakin esimerkeissä tulen viittaamaan koodin pätkiin. HTML & CSS hieman itse selitteisiä
 
 HTML (5/5) 25%
 
