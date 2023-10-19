@@ -45,53 +45,86 @@ const images = ["https://st2.depositphotos.com/3528377/6481/i/450/depositphotos_
         image.height = firstImageHeight;
     });
 
-    function startCountdown() {
-        let countdown = 60; //Initial countdown
-        const countdownElement = document.getElementById('countdown');
-    
-        const countdownInterval = setInterval(function () {
-            countdownElement.innerText = `Time left: ${countdown}`;
-    
-            if (countdown <= 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerText = 'Countdown: Done!';
-                //Restart the timer after 2 seconds.
-                setTimeout(function (){
-                    countdownElement.innerText = 'AGAIN!';
-                    startCountdown();
-                }, 2000);
+    class CountdownTimer {
+        constructor(countdownElement, initialTime) {
+          this.countdownElement = countdownElement;
+          this.initialTime = initialTime;
+          this.time = initialTime;
+          this.interval = null;
+        }
+      
+        start() {
+          this.reset();
+          this.updateCountdown();
+      
+          this.interval = setInterval(() => {
+            if (this.time <= 0) {
+              clearInterval(this.interval);
+              this.countdownElement.innerText = 'AGAIN!';
+              setTimeout(()=>{
+              this.reset();
+              this.start();
+              }, 2000);
             } else {
-                countdown--;
+              this.time--;
+              this.updateCountdown();
             }
-        }, 1000); //Update every second
-    }
-    
-    //Start timer
-    startCountdown();
+          }, 1000);
+        }
+      
+        updateCountdown() {
+          this.countdownElement.innerText = `Review Time: ${this.time}`;
+        }
+      
+        reset() {
+          clearInterval(this.interval);
+          this.time = this.initialTime;
+          this.updateCountdown();
+        }
+      }
+      
+      const countdownElement = document.getElementById('countdown');
+      const initialTime = 60;
+      const countdownTimer = new CountdownTimer(countdownElement, initialTime);
+      countdownTimer.start();
 
-    const apiKey = 'MH0QLY17SXF8TB6D'; //Own API key from AlphaVantage
-const stockSymbol = 'AAPL'; //Stock symbol for APPLE
-const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stockSymbol}&interval=1min&apikey=${apiKey}`;
+const apiKey = 'MH0QLY17SXF8TB6D'; //Own API key from AlphaVantage
+document.getElementById('apple-stock').addEventListener('click', () => {
+    const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=1min&apikey=${apiKey}`;
+    const stockPriceElement = document.getElementById('stock-price');
 
+    stockPriceElement.innerHTML = 'Stock Price: Loading...';
 
-//HTML element for the display result.
-const stockPriceElement = document.getElementById('stock-price');
+    fetch(aaplApiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            const timeSeries = data['Time Series (1min)'];
+            const lastRefreshed = data['Meta Data']['3. Last Refreshed'];
+            const stockPrice = timeSeries[lastRefreshed]['1. open'];
 
-//Fetch stock price data from the API.
-fetch(apiUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    //Processing the API response
-    const timeSeries = data['Time Series (1min)'];
-    const lastRefreshed = data['Meta Data']['3. Last Refreshed'];
+            stockPriceElement.innerHTML = `Stock Price for AAPL: $${stockPrice}, Last updated: ${lastRefreshed}`;
+        })
+        .catch((error) => {
+            stockPriceElement.textContent = 'Error: Unable to fetch stock price';
+        });
+});
 
-    //Last refreshed timestamp for price
-    const stockPrice = timeSeries[lastRefreshed]['1. open'];
+document.getElementById('microsoft-stock').addEventListener('click', () => {
+    const microsoftApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=${apiKey}`;
+    const stockPriceElement = document.getElementById('stock-price');
 
-    //Newest stock price to HTML
-    stockPriceElement.innerHTML = `Stock Price for APPLE [${stockSymbol}]: $${stockPrice}, Last updated: ${lastRefreshed}`;
-  })
-  .catch((error) => {
-    //Throws error incase it fails to fetch API data
-    stockPriceElement.textContent = 'Error: Unable to fetch stock price';
-  });
+    stockPriceElement.innerHTML = 'Stock Price: Loading...';
+
+    fetch(microsoftApiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            const timeSeries = data['Time Series (1min)'];
+            const lastRefreshed = data['Meta Data']['3. Last Refreshed'];
+            const stockPrice = timeSeries[lastRefreshed]['1. open'];
+
+            stockPriceElement.innerHTML = `Stock Price for MSFT: $${stockPrice}, Last updated: ${lastRefreshed}`;
+        })
+        .catch((error) => {
+            stockPriceElement.textContent = 'Error: Unable to fetch stock price';
+        });
+});
