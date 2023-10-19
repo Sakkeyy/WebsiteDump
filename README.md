@@ -7,16 +7,19 @@ HTML (5/5) 25%
 
 1. Basic HTML structure is present.
 2. HMTL structure with clear content differentation(Headings, paragraphs, lists)
-3. Use of forms, links and media.
-4. Tables are effectively used.
-5. Consistent use of semantic HTML througout
+3. Use of forms, links and media. (there are links to KRP and photos)
+4. Tables are effectively used. (First name Last name list)
+5. Consistent use of semantic HTML througout (<headers>, <mains>, <sections> etc.)
 
 CSS (5/5) 25%
 1. Basic CSS styling (colors, fonts)
 2. Use of classes and IDs to style spesific elements
 3. Implementation of responsive design elements
-4. Use of layouts for advanced user interfaces (I used flexbox for the SELF ADJUSTING TEXT on the top of the web-page to stay consistent across viewmodel changes and also in HMTL files using <meta name="viewport" content="width=device-width, initial-scale=1.0">)
-5. Styling demonstrates a strong grasp of layout principles, aesthetics, and user experience.(this is highly subjective)
+4. Use of layouts for advanced user interfaces (I used flexbox for the SELF ADJUSTING TEXT on the top of the web-page to stay consistent across viewmodel changes and also in HMTL files using
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">)
+```
+6. Styling demonstrates a strong grasp of layout principles, aesthetics, and user experience.(this is highly subjective)
 
 JavaScript Basics (5/5) 25%
 1. Simple interactions (Alerts on button click on the radiobuttons "Yes/No")
