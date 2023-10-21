@@ -19,7 +19,7 @@ Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikr
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0">)
 ```
-5. Styling demonstrates a strong grasp of layout principles, aesthetics, and user experience.(this is highly subjective)
+5. Styling demonstrates a strong grasp of layout principles, aesthetics, and user experience.(this is HIGHLY subjective)
 
 **JavaScript Basics (5/5) 25%**
 1. Simple interactions (Alerts on button click on the radiobuttons "Yes/No")
