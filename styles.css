@@ -79,7 +79,7 @@ img {
 
 #countdown {
     position: fixed;
-    top: 50px; /*How far away from the top*/
+    top: 120px; /*How far away from the top*/
     right: 10px; /*How far away from the right side*/
     background-color: #333;
     color: #fff;
