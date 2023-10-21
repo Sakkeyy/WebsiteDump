@@ -1,6 +1,6 @@
 # Web Developement Project for IN00DL12-3002
 
-Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikriteereistä verkkosivuni luomisessa. Joissakin esimerkeissä tulen viittaamaan koodin pätkiin. 
+Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikriteereistä verkkosivuni luomisessa. Joissakin esimerkeissä tulen viittaamaan koodin pätkiin.  
 HTML & CSS paikkapaikoin itse selitteisiä
 
 ### HTML (5/5) 25%
