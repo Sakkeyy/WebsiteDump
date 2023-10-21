@@ -45,7 +45,7 @@ const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRA
             const timeSeries = data['Time Series (1min)'];
             const lastRefreshed = data['Meta Data']['3. Last Refreshed'];
             const stockPrice = timeSeries[lastRefreshed]['1. open'];
-
+                //Display the fetched data
             stockPriceElement.innerHTML = `Stock Price for AAPL: $${stockPrice}, Last updated: ${lastRefreshed}`;
         })
 ```
@@ -60,6 +60,8 @@ const aaplApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRA
 5. Effective use of asynchronous data to enhance user experience(I chose to implement two buttons to fetch two different stock prices, in my project for APPLE and MICROSOFT)
 ```
 document.getElementById('microsoft-stock').addEventListener('click', () => {
-    const microsoftApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=${apiKey}`; //Easy to implement by only chaning the "MSFT" to any of the existing stock keys out there.
+    const microsoftApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=${apiKey}`;
+//Easy to implement by chaning the "MSFT" to any of the available stock keys for AlphaVantage.
+//Can also be done by storing it in a variable and replacing "MSFT" with ${stockSymbol}
 ```
 
