@@ -9,7 +9,7 @@ Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikr
 2. HMTL structure with clear content differentation(Headings, paragraphs, lists)
 3. Use of forms, links and media. (there are links to KRP and photos)
 4. Tables are effectively used. (First name Last name list)
-5. Consistent use of semantic HTML througout (<headers>, <mains>, <sections> etc.)
+5. Consistent use of semantic HTML througout (headers, mains, sections, etc.)
 
 **CSS (5/5) 25%**
 1. Basic CSS styling (colors, fonts)
