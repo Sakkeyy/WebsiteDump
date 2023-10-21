@@ -21,7 +21,11 @@ th {
     background-color: #f2f2f2;
 }
 
-tr:nth-child(even) {
+tr:hover{
+    background-color: #999 !important;
+}
+
+tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
@@ -47,11 +51,17 @@ body{
 }
 
 #nameTable {
-    margin: 0 auto;
+    text-align: center;
 }
 
 .box { /*For table*/
     border: 2px solid #333;
+    width: 80%;
+    margin: 0 auto;
+}
+
+tr {
+    border-bottom: 1px solid black;
 }
 
 h1{
@@ -101,12 +111,12 @@ img {
     box-shadow: 0 2px #999;
   }
   
-  .button:hover {background-color: #3e8e41}
+    .button:hover {background-color: #3e8e41}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 1px #666;
-  transform: translateY(2px);
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 1px #666;
+        transform: translateY(2px);
 }
 
   
