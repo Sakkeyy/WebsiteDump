@@ -4,6 +4,14 @@ table {
     margin: 20px 0;
 }
 
+nav ul {
+    list-style-type: square;
+}
+
+nav a{
+    text-decoration: none;
+}
+
 th, td {
     padding: 8px;
     text-align: left;
@@ -48,10 +56,15 @@ body{
 
 h1{
     font-size: 40px;
+    font-family: 'Arial', sans-serif;
 }
 
 h2{
     font-family: 'Arial', sans-serif;
+}
+
+.crude{
+    font-family: "Comic Sans MS", cursive;
 }
 
 .flex-container { /* top of the page texts adjusting*/
@@ -72,3 +85,28 @@ img {
     color: #fff;
     padding: 5px;
 }
+
+.button {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #843274;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
+
+  

@@ -19,7 +19,7 @@
         <h1>Welcome to My Website for IN00DL12-3002</h1>
         <nav>
             <ul>
-                <li><a href="#about">About me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Photos</a></li>
                 <li><a href="#contact">Tell us</a></li>
             </ul>
@@ -37,8 +37,8 @@
             <h2>Photos</h2>
             <div id="image-slider">
                 <img id="slider-image" src="https://st2.depositphotos.com/3528377/6481/i/450/depositphotos_64810021-stock-photo-policeman-with-folded-hands.jpg" alt="Image 1">
-                <button onclick="prevImage()">Previous</button>
-                <button onclick="nextImage()">Next</button>
+                <button onclick="prevImage()" class ="button">Previous</button>
+                <button onclick="nextImage()" class = "button">Next</button>
             </div>
             
         </section>
@@ -50,7 +50,7 @@
                 <input type="text" id="fname" name="fname" value="John"><br>
                 <label for="lname">Last name:</label><br>
                 <input type="text" id="lname" name="lname" value="Doe"><br>
-                <input type="button" value="Submit" onclick="updateTable()">
+                <input type="button" class="button" value="Submit" onclick="updateTable()">
             </form>
             
             <p>The data will be sent to <a href="https://poliisi.fi/keskusrikospoliisi">Suomen keskusrikospoliisi</a> To check if you have a criminal record.</p>
@@ -69,7 +69,7 @@
                   <td>Aataminpoika</td>
                 </tr>
             </table>
-
+<p class="crude">The website itself is pretty crude, but it should check all the checkmarks in the reviewing criteria</p>
             <form>
                 <fieldset>
                     <legend>Was this useful?</legend>
@@ -82,15 +82,15 @@
                         No
                     </label>
                 </fieldset>
-                <input type="button" value="Submit" onclick="showMessage()">
+                <input type="button" class="button" value="Submit" onclick="showMessage()">
             </form>
 
         </section>
     </main>
 
     <div>
-        <button id="apple-stock">Apple</button>
-        <button id="microsoft-stock">Microsoft</button>
+        <button id="apple-stock" class="button">Apple</button>
+        <button id="microsoft-stock" class="button">Microsoft</button>
     </div>
 
     <div id="stock-price">Choose Stock...</div>
