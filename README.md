@@ -8,6 +8,8 @@ Download the repository as a .zip file to your computer, extract the zip files i
 Open index.HTML with your desired browser (I have only tested with Mozilla and Chrome).  
 Everything *should* now work properly, if the images do not load, try refreshing the page.
 
+
+
 ### HTML (5/5) 25%
 
 1. Basic HTML structure is present.
