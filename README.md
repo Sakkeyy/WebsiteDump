@@ -3,6 +3,11 @@
 Olen tähdännyt numeroon 5 ja täyttänyt kaikki tarvittavat kohdat arviointikriteereistä verkkosivuni luomisessa. Joissakin esimerkeissä tulen viittaamaan koodin pätkiin.  
 HTML & CSS paikkapaikoin itse selitteisiä
 
+## Setting up
+Download the repository as a .zip file to your computer, extract the zip files into a folder.  
+Open index.HTML with your desired browser (I have only tested with Mozilla and Chrome).  
+Everything *should* now work properly, if the images do not load, try refreshing the page.
+
 ### HTML (5/5) 25%
 
 1. Basic HTML structure is present.
