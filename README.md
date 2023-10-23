@@ -6,7 +6,7 @@ HTML & CSS paikkapaikoin itse selitteisiä
 ## Setting up
 Download the repository as a .zip file to your computer, extract the zip files into a folder.  
 Open index.HTML with your desired browser (I have only tested with Mozilla and Chrome).  
-Everything *should* now work properly, if the images do not load, try refreshing the page.
+Everything *should* now work properly, if the images do not load, try refreshing the page.  
 
 
 
